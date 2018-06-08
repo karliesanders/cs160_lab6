@@ -1,7 +1,5 @@
 _author_ = 'Karlie Sanders'
 
-_author_ = 'Karlie Sanders'
-
 #user_file = input("enter file name: ")
 #with open ('lab6file.txt', 'r+') as file:
 #	file_lines = file.readlines()
@@ -18,13 +16,13 @@ def main():
    for line in file_lines:
       words = line.split()
       counts = {}
-   for word in words:
-      if word in counts.keys():
-         counts[word] = counts[word] + 1
-      else:
-         counts[word] = 1
+      for word in words:
+          if word in counts.keys():
+             counts[word] = counts[word] + 1
+          else:
+             counts[word] = 1
 
-    for key in sorted(counts.keys()):
+   for key in sorted(counts.keys()):
       print("the word {0} occurs {1} times".format(key,counts[key]))
 
 main()
